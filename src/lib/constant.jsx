@@ -65,4 +65,4 @@ export const EVENTCATEGORY={
   UPCOMING:'upcoming'
 }
 
-/// demo pushed
+/// git push -u origin main
