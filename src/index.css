@@ -1,0 +1,242 @@
+@import url("./fonts.css");
+@import url("./quill.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply antialiased font-hellix;
+    }
+
+    .enable-html-styles>p,
+    .enable-html-styles>span,
+    .enable-html-styles>pre,
+    .enable-html-styles>h1,
+    .enable-html-styles>h2,
+    .enable-html-styles>h3,
+    .enable-html-styles>h4,
+    .enable-html-styles>h5,
+    .enable-html-styles>h6,
+    .enable-html-styles>img,
+    .enable-html-styles>table,
+    .enable-html-styles>tr,
+    .enable-html-styles>td,
+    .enable-html-styles>th,
+    .enable-html-styles>strong,
+    .enable-html-styles>b,
+    .enable-html-styles>i,
+    .enable-html-styles>em,
+    .enable-html-styles>ol,
+    .enable-html-styles>ul,
+    .enable-html-styles>li,
+    .enable-html-styles>a {
+        font-size: revert;
+    }
+}
+
+input[type='number'] {
+    @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #161616 inset;
+    -webkit-text-fill-color: #888;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.sc-feUYzb::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.sc-feUYzb::-webkit-scrollbar-track {
+    background: #F8F8F8;
+}
+
+.sc-feUYzb::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.sc-feUYzb::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.timpicker::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+
+
+.form-group {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.form-group label {
+    position: relative;
+    cursor: pointer;
+}
+
+.form-group label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #FF944E;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    border-radius: 7px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.form-group input:checked+label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    width: 6px;
+    height: 14px;
+    border: 1 solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+
+
+.simplebar-scrollbar:before {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.simplebar-scrollbar:hover:before {
+    background-color: #555;
+}
+
+
+.main-notify-dialog::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-notify-dialog::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main-notify-dialog::-webkit-scrollbar-thumb {
+    background-color: #161616;
+    border-radius: 10px;
+
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.small-loader-container {
+    animation: spin 1s linear infinite;
+}
+
+
+
+.lds-ring,
+.lds-ring div {
+    box-sizing: border-box;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 6px solid white;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: white transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
